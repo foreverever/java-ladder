@@ -15,20 +15,15 @@ public class ElementOfLadder {
         }
     }
 
-    //사다리 라인 랜덤 boolean값 받기
+    //사다리 라인 얻기
     public boolean getRandBoolean(int now) {
         Random random = new Random();
-        if ((random.nextInt(RANGE) > RESTRICTNUM) && checkDuplication(now)) {
-            return true;
-        }
-        return false;
+        return ((random.nextInt(RANGE) > RESTRICTNUM) && checkDuplication(now));
     }
 
+    //연속된 라인의 true값 중복 체크
     public boolean checkDuplication(int now) {
-        if (now > 0 && elementOfLadder.get(now - 1).equals(true)) {
-            return false;
-        }
-        return true;
+        return (!(now > 0 && elementOfLadder.get(now - 1).equals(true)));
     }
 
     public Boolean getValue(int i) {
