@@ -6,10 +6,10 @@ import java.util.Random;
 
 public class ElementOfLadder {
     static final int RANGE = 10;
-    static final int RESTRICTNUM = 4;
+    static final int RESTRICTNUM = 5;
     private List<Boolean> elementOfLadder = new ArrayList<>();
 
-    public void elementOfLadder(int width) {
+    public ElementOfLadder(int width) {
         for (int i = 0; i < width; i++) {
             elementOfLadder.add(getRandBoolean(i));
         }

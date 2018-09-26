@@ -2,12 +2,32 @@ package ladder;
 
 import java.util.List;
 
+import static ladder.InputView.*;
+
 public class ResultView {
 
-    //화면 출력
+    //이름 출력
+    public static void printNames(String[] names) {
+        for (int i = 0; i < names.length; i++) {
+            arrangeNameSpace(names, i);
+        }
+        for (int i = 0; i < names.length; i++) {
+            System.out.print(names[i]);
+        }
+        System.out.println();
+    }
+
+    //이름 간격 맞추기
+    public static void arrangeNameSpace(String[] names, int i) {
+        while (names[i].length() <= RESTRICT_NAME_RANGE) {
+            names[i] = " " + names[i];
+        }
+    }
+
+    //사다리 출력
     public static void printResult(List<ElementOfLadder> ladders) {
         for (int i = 0; i < ladders.size(); i++) {
-            System.out.print("|");
+            System.out.print("     |");
             drawOneElementOfLadder(ladders, i);
             System.out.println();
         }
@@ -22,8 +42,8 @@ public class ResultView {
 
     public static String installLine(boolean bool) {
         if (bool) {
-            return "-";
+            return "-----";
         }
-        return " ";
+        return "     ";
     }
 }
