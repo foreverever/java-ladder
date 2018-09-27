@@ -1,8 +1,10 @@
-package ladder;
+package ladder.view;
+
+import ladder.domain.ElementOfLadder;
 
 import java.util.List;
 
-import static ladder.InputView.*;
+import static ladder.view.InputView.*;
 
 public class ResultView {
 

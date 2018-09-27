@@ -1,4 +1,4 @@
-package ladder;
+package ladder.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,10 @@ public class ElementOfLadder {
         for (int i = 0; i < width; i++) {
             elementOfLadder.add(getRandBoolean(i));
         }
+    }
+
+    public ElementOfLadder(List<Boolean> elementOfLadder) {
+        this.elementOfLadder = elementOfLadder;
     }
 
     //사다리 라인 얻기
