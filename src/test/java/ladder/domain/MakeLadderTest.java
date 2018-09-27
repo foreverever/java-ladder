@@ -9,5 +9,6 @@ public class MakeLadderTest {
     public void makeLadderTest() {
         MakeLadder makeLadder = new MakeLadder(3, 5);
         assertThat(makeLadder.getLadderSize()).isEqualTo(5);
+        
     }
 }
