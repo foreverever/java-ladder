@@ -7,8 +7,7 @@ import org.junit.Test;
 public class MakeLadderTest {
     @Test
     public void makeLadderTest() {
-        MakeLadder makeLadder = new MakeLadder(3, 5);
+        MakingLadder makeLadder = new MakingLadder(3, 5);
         assertThat(makeLadder.getLadderSize()).isEqualTo(5);
-        
     }
 }

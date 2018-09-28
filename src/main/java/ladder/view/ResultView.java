@@ -2,6 +2,8 @@ package ladder.view;
 
 import ladder.domain.ElementOfLadder;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import static ladder.view.InputView.*;
@@ -9,29 +11,36 @@ import static ladder.view.InputView.*;
 public class ResultView {
 
     //이름 출력
-    public static void printNames(String[] names) {
+    public static void printView(String[] names) {
         for (int i = 0; i < names.length; i++) {
-            arrangeNameSpace(names, i);
-        }
-        for (int i = 0; i < names.length; i++) {
-            System.out.print(names[i]);
+            System.out.print(String.format("%6s", names[i]));
         }
         System.out.println();
     }
 
-    //이름 간격 맞추기
-    public static void arrangeNameSpace(String[] names, int i) {
-        while (names[i].length() <= RESTRICT_NAME_RANGE) {
-            names[i] = " " + names[i];
-        }
-    }
-
     //사다리 출력
-    public static void printResult(List<ElementOfLadder> ladders) {
+    public static void printLadder(List<ElementOfLadder> ladders) {
         for (int i = 0; i < ladders.size(); i++) {
             System.out.print("     |");
             drawOneElementOfLadder(ladders, i);
             System.out.println();
+        }
+    }
+
+    //사다리 타기 결과 출력
+    public static void printResultOfRidingLadder(String name, HashMap<String, String> resultMap) {
+        if (name.equals("all")) {
+            showAllResult(resultMap);
+        } else {
+            System.out.println(resultMap.get(name));
+        }
+    }
+
+    public static void showAllResult(HashMap<String, String> resultMap) {
+        Iterator<String> keySetIterator = resultMap.keySet().iterator();
+        while (keySetIterator.hasNext()) {
+            String key = keySetIterator.next();
+            System.out.println(key + " : " + resultMap.get(key));
         }
     }
 

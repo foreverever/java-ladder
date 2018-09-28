@@ -40,4 +40,16 @@ public class InputView {
         System.out.println("최대 사다리 높이는 몇 개인가요?");
         return sc.nextInt();
     }
+
+    //실행 결과 입력 받기
+    public static String[] getResultInfo() {
+        System.out.println("실행 결과를 입력하세요. (이름은 쉼표(,)로 구분하세요.)");
+        return sc.nextLine().split(",");
+    }
+
+    public static String getResultOfPeople() {
+        System.out.println("결과를 보고 싶은 사람은?");
+        sc.nextLine();
+        return sc.nextLine();
+    }
 }
