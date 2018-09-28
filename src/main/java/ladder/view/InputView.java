@@ -22,14 +22,14 @@ public class InputView {
     public static boolean isNotRightNamesRange(String[] names) {
         int errorNum = 0;
         for (int i = 0; i < names.length; i++) {
-            errorNum += checkNameRange(names, i);
+            errorNum += checkNameRange(names[i]);
         }
         return errorNum > 0;
     }
 
     //이름 글자 수 체크2
-    public static int checkNameRange(String[] names, int i) {
-        if (names[i].length() > RESTRICT_NAME_RANGE) {
+    public static int checkNameRange(String name) {
+        if (name.length() > RESTRICT_NAME_RANGE) {
             return 1;
         }
         return 0;
