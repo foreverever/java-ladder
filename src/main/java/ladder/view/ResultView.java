@@ -6,8 +6,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import static ladder.view.InputView.*;
-
 public class ResultView {
 
     //이름 출력

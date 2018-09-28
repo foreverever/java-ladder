@@ -3,7 +3,6 @@ package ladder.view;
 import org.junit.Test;
 
 import static ladder.view.InputView.checkNameRange;
-import static ladder.view.InputView.sc;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class InputViewTest {
