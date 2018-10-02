@@ -27,25 +27,25 @@ public class RidingLadderTest {
         ladders.add(elementOfLadder3);
     }
 
-    @Test
-    public void ridingLadderTest() {
-        HashMap<String, String> resultMap;
-        DataOfLadder dto = new DataOfLadder(ladders, names, resultInfo);
-        RidingLadder rl = new RidingLadder(dto);
-        resultMap = rl.rideLadder();
-
-        for (int i = 0; i < ladders.size(); i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(ladders.get(i).getValue(j) + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        Iterator<String> keySetIterator = resultMap.keySet().iterator();
-        while (keySetIterator.hasNext()) {
-            String key = keySetIterator.next();
-            System.out.println(key + " : " + resultMap.get(key));
-        }
-    }
+//    @Test
+//    public void ridingLadderTest() {
+//        HashMap<String, String> resultMap;
+//        DataOfLadder dto = new DataOfLadder(ladders, names, resultInfo);
+//        RidingLadder rl = new RidingLadder(dto);
+//        resultMap = rl.rideLadder();
+//
+//        for (int i = 0; i < ladders.size(); i++) {
+//            for (int j = 0; j < 3; j++) {
+//                System.out.print(ladders.getResultIndex(i).getValue(j) + " ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println();
+//
+//        Iterator<String> keySetIterator = resultMap.keySet().iterator();
+//        while (keySetIterator.hasNext()) {
+//            String key = keySetIterator.next();
+//            System.out.println(key + " : " + resultMap.getResultIndex(key));
+//        }
+//    }
 }
