@@ -23,13 +23,13 @@ public class ElementOfLadder {
     }
 
     //사다리 라인 얻기
-    public boolean getRandBoolean(int current) {
+    private boolean getRandBoolean(int current) {
         Random random = new Random();
         return ((random.nextInt(RANGE) > RESTRICTNUM) && checkDuplication(current));
     }
 
     //연속된 라인의 true값 중복 체크
-    public boolean checkDuplication(int now) {
+    private boolean checkDuplication(int now) {
         return (!(now > 0 && elementOfLadder.get(now - 1)));
     }
 

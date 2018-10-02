@@ -18,7 +18,7 @@ public class ResultView {
     }
 
     //이름 출력
-    public void printNames() {
+    private void printNames() {
         for (int i = 0; i < dto.getWidth(); i++) {
             System.out.print(String.format("%6s", dto.getNames()[i]));
         }
@@ -26,7 +26,7 @@ public class ResultView {
     }
 
     //결과 출력
-    public void printResult() {
+    private void printResult() {
         for (int i = 0; i < dto.getWidth(); i++) {
             System.out.print(String.format("%6s", dto.getResultInfo()[i]));
         }
@@ -34,7 +34,7 @@ public class ResultView {
     }
 
     //사다리 출력
-    public void printLadder() {
+    private void printLadder() {
         for (int i = 0; i < dto.getHeight(); i++) {
             System.out.print("     |");
             drawOneElementOfLadder(i);
@@ -54,7 +54,7 @@ public class ResultView {
         }
     }
 
-    public void showAllResult() {
+    private void showAllResult() {
         Iterator<Integer> keySetIterator = dto.getResultMap().keySet().iterator();
         while (keySetIterator.hasNext()) {
             Integer key = keySetIterator.next();
@@ -62,14 +62,14 @@ public class ResultView {
         }
     }
 
-    public void drawOneElementOfLadder(int n) {
+    private void drawOneElementOfLadder(int n) {
         for (int i = 0; i < dto.sizeOfElement(); i++) {
             System.out.print(installLine(dto.getElementValue(n, i)));
             System.out.print("|");
         }
     }
 
-    public String installLine(boolean bool) {
+    private String installLine(boolean bool) {
         if (bool) {
             return "-----";
         }

@@ -25,7 +25,7 @@ public class Ladder {
         return resultMap;
     }
 
-    public int rideOneOfPeople(int current) {
+    private int rideOneOfPeople(int current) {
         for (ElementOfLadder elementOfLadder : ladder) {
             current = elementOfLadder.move(current);
         }
